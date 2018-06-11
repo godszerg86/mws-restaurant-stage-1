@@ -176,3 +176,18 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 }
+
+
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(reg => console.log(`SW succes REG in `, reg.scope))
+    .catch(e => console.log(`NOPE `, e))
+} else {
+  console.log(`SW NOT SUPPORTED BY YOUR BROWSER`)
+}
+
+
+if (!navigator.onLine){
+  document.querySelector('#map-container').classList.add('hide-me');
+}
