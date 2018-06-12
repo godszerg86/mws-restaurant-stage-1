@@ -188,6 +188,3 @@ if ('serviceWorker' in navigator) {
 }
 
 
-if (!navigator.onLine){
-  document.querySelector('#map-container').classList.add('hide-me');
-}

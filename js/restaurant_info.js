@@ -168,8 +168,3 @@ getParameterByName = (name, url) => {
 }
 
 
-if (!navigator.onLine){
-  document.querySelector('#map-container').classList.add('hide-me');
-  document.querySelector('##restaurant-container').classList.add('full-screen');
-  document.querySelector('#breadcrumb').classList.add('full-screen');
-}
